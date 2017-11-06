@@ -24,20 +24,42 @@ myApp.directive('img', function ($compile, $parse) {
             replace: false,
             link: function (scope, element, attr) {
                 var $element = $(element);
-                var lastScrollTop = 0;
+                var lastScrollTop = 60;
                 $(window).scroll(function (event) {
                     var st = $(this).scrollTop();
+                    // if (st > lastScrollTop) {
+                    //     $(element).addClass('nav-up');
+                    // } else {
+                    //     $(element).removeClass('nav-up');
+                    // }
+                    // lastScrollTop = st;
+                    // console.log(lastScrollTop, st);
                     if (st > lastScrollTop) {
-                        $(element).addClass('nav-up');
+                        $(element).addClass('header-height');
                     } else {
-                        $(element).removeClass('nav-up');
+                        $(element).removeClass('header-height');
                     }
-                    lastScrollTop = st;
                 });
             }
         };
     })
-
+    .directive('scrollEffect', function ($document) {
+        return {
+            restrict: 'EA',
+            replace: false,
+            link: function (scope, element, attr) {
+                var $element = $(element);
+                var lastScrollTop = 60;
+                $(window).scroll(function (event) {
+                    var st = $(this).scrollTop();
+                    if (st < 500) {
+                        $('#b1').css("background-position-y", st);
+                    }
+                    console.log("inside")
+                });
+            }
+        };
+    })
 
     .directive('fancybox', function ($document) {
         return {

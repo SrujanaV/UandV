@@ -1,23 +1,36 @@
 myApp.factory('NavigationService', function () {
     var navigation = [{
-            name: "Home",
+            name: "HOME",
             classis: "active",
-            anchor: "home",
-            subnav: [{
-                name: "Subnav1",
-                classis: "active",
-                anchor: "home"
-            }]
+            // anchor: "home",
+            link: "#b1",
+            subnav: []
         }, {
-            name: "Form",
+            name: "ABOUT US",
             classis: "active",
-            anchor: "form",
+            // anchor: "form",
+            link: "#aboutus",
             subnav: []
         },
         {
-            name: "Grid",
+            name: "PORTFOLIO",
             classis: "active",
-            anchor: "grid",
+            // anchor: "grid",
+            link: "#portfolio",
+            subnav: []
+        },
+        {
+            name: "SERVICES",
+            classis: "active",
+            // anchor: "grid",
+            link: "#services",
+            subnav: []
+        },
+        {
+            name: "CONTACT US",
+            classis: "active",
+            // anchor: "grid",
+            link: "#contactus",
             subnav: []
         }
     ];

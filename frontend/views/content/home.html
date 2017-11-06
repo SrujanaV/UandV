@@ -1,32 +1,59 @@
-<div class="container">
-    <a class="btn btn-default" ng-click="buttonClick()">Demo Button</a>
-    <flex-slider flex-slide="s in mySlides" prev-text="" next-text="">
-        <li>
-            <img ng-src="{{s}}" class="img-full">
-        </li>
-    </flex-slider>
-    <swiper autoplay="5000" effect="slide" slides-per-view="1" loop="true">
-        <slides>
-            <slide ng-repeat="s in mySlides">
-                <img ng-src="{{s}}" class="img-full" noloading="true">
-            </slide>
-        </slides>
-        <prev></prev>
-        <next></next>
-        <pagination></pagination>
-    </swiper>
-    <div class="row">
-        <div class="col-md-2" ng-repeat="s in mySlides">
-            <a ng-href="{{s}}" data-fancybox="group" rel="gallary" fancybox>
-                <img ng-src="{{s}}" class="img-full">
-            </a>
+<div scroll-effect>
+    <section id="b1">
+        <div class="inner-b1 bg-white-op">
+            <div class="b1-content ">
+                <div class="txt">
+                    TOGETHER<br/> WE
+                    <br/> GROW
+                    <br/>
+                </div>
+                <hr>
+                <div class="txt2">An advertising agency with a difference, where excellence and brilliance are not goals but norms</div>
+            </div>
+
         </div>
-        <div class="col-md-2">
-            <a class="various" data-fancybox="group" rel="gallary" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1" fancybox><img ng-src="http://img.youtube.com/vi/L9szn1QQfas/maxresdefault.jpg" class="img-full"></a>
+    </section>
+    <section id="aboutus">
+
+        <div class="inside_abtus">
+            <div class="h1 text-center abt-title">ABOUT US</div>
+            <div class="cnt">
+                <div class="col-md-4 txt">
+                    <div class="number">01.</div>
+                    <div class="heading">Advertising <br/>Agency</div>
+                    <div class="cont">
+                        Advertising agency with a difference, where excellence and brilliance are not goals but norms. The Company was founded in
+                        1997 by Umang Desai (A Commercial Artist from one of the most prominent Art college of Mumbai).</div>
+                    <hr>
+                </div>
+                <div class="col-md-4 txt">
+                    <div class="number">02.</div>
+                    <div class="heading">Quality Of <br/>Work</div>
+                    <div class="cont">
+                        As the name suggests 'U&V creativess' is all about 'U' the Client and 'V' the agency. As a creative advertising agency of
+                        much repute 'U&V creativess' is highly rated by its clients in terms of exceptional Quality of work
+                        and Satisfaction.
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-md-4 txt">
+                    <div class="number">03.</div>
+                    <div class="heading">Outstanding <br/>Creativity</div>
+                    <div class="cont">
+                        Sincere dedication, pure hardwork, outstanding creativity and ingenuity are but a few of the driving forces behind the agency's
+                        present success.</div>
+                    <hr>
+                </div>
+            </div>
         </div>
-        <div class="col-md-2">
-            <a class="various" data-fancybox="group" rel="gallary" href="https://vimeo.com/191947042" class="img-full"></a>
+    </section>
+    <section id="portfolio">
+        <div class="inside_port">
+            <div class="h1 text-center p-title">PORTFOLIO</div>
+            <div class="col-md-3 block" ng-repeat="x in portfolio"><span>{{x.name}}</span></div>
+
         </div>
-    </div>
+    </section>
+    <div id=" " style="background: green;height:100vh "></div>
 
 </div>

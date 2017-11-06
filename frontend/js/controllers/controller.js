@@ -18,7 +18,36 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             i++;
             console.log("This is a button Click");
         };
-
+        $scope.portfolio = [{
+                name: 'LOGO'
+            }, {
+                name: 'CORPORATE IDENTITY'
+            }, {
+                name: 'BROCHURE'
+            }, {
+                name: 'CATALOGUE '
+            },
+            {
+                name: 'PACKAGING'
+            },
+            {
+                name: 'CATALOGUE '
+            },
+            {
+                name: 'EVENT / FESTIVE'
+            },
+            {
+                name: 'BOOK COVER'
+            }, {
+                name: 'ADVERTISEMENT'
+            }, {
+                name: 'WEBSITE DESIGN'
+            }, {
+                name: 'E-CAT / MAILER'
+            }, {
+                name: 'PHOTOGRAPHY'
+            }
+        ]
 
 
     })

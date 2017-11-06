@@ -9,9 +9,19 @@ $brand-info: #000072 !default;
 
 /* Bootstrap Variables Goes Here */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 @import "other/font-fix";
 body {
-    padding-top: 70px;
+    // padding-top: 110px;
+    background-color: #f3f3f3;
+    font-family: 'Montserrat';
+}
+
+.content {
+    margin-left: 21%;
+    width: 79%;
+    overflow: hidden;
 }
 
 img.loading {
@@ -118,4 +128,215 @@ header {
 
 .nav-up {
     transform: translateY(-100%);
+}
+
+// .nav-style {
+//     height: 110px;
+//     transition: all 500ms;
+//     background: rgba(96, 187, 177, 0.93);
+//     -webkit-box-shadow: 1px 1px 26px 0px rgba(50, 50, 50, 0.75);
+//     -moz-box-shadow: 1px 1px 26px 0px rgba(50, 50, 50, 0.75);
+//     box-shadow: 1px 1px 26px 0px rgb(96, 187, 177);
+//     border: none;
+//     .navbar-nav {
+//         float: right;
+//         li {
+//             a {
+//                 padding: 35px;
+//                 background: none;
+//                 background-color: transparent !important;
+//                 padding: 35px 25px;
+//                 padding-bottom: 30px;
+//                 color: white !important;
+//                 font-size: 15px;
+//             }
+//             .active {
+//                 border-bottom: 4px solid rgb(255, 255, 255);
+//             }
+//         }
+//     }
+// }
+//navbar
+.side-nav {
+    font-family: 'Montserrat';
+    width: 21%;
+    overflow: hidden;
+    height: 100vh;
+    padding: 20px;
+    padding: 0 45px;
+    padding-top: 50px;
+    background-color: #ffffff;
+    .navbar-nav {
+        width: 100%;
+        li {
+            float: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+            a {
+                padding-left: 0px;
+                font-size: 11px;
+                font-weight: 500;
+                color: #626262;
+                &:hover {
+                    color: black;
+                }
+                .active {
+                    color: black;
+                }
+                .fa {
+                    float: right;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+    .nav-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        margin-left: -45px;
+        padding: 20px;
+        .social {
+            font-size: 16px;
+            .fa {
+                padding: 0px 10px;
+                cursor: pointer;
+                transition: all 1s;
+                &:hover {
+                    color: #62bcb2;
+                }
+            }
+        }
+        .copyr {
+            font-size: 10px;
+        }
+    }
+    .navbar-header {
+        width: 100%;
+        float: none;
+        text-align: -webkit-center;
+        margin-bottom: 50px;
+        .navbar-brand {
+            float: none;
+        }
+    }
+    .logo {
+        width: 70px;
+        margin: 0 auto;
+    }
+}
+
+#b1 {
+    background-image: url(http://dsecreative.com/wp-content/uploads/2015/07/dse-creative-background-company-logo-design_1-01.png);
+    background-attachment: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.inner-b1 {
+    // padding: 50px;
+    margin-left: 35%;
+    /* margin-right: 3%; */
+    padding: 7%;
+    width: 62%;
+    height: 100%;
+    overflow-y: scroll;
+    .txt {
+        font-size: 85px;
+        letter-spacing: -2px;
+        line-height: 90px;
+        font-weight: bold;
+    }
+    hr {
+        border-top: 2px solid rgba(0, 0, 0, 0.84);
+        margin-top: 100px;
+        background-color: white;
+    }
+    .txt2 {
+        line-height: 25px;
+        letter-spacing: 1px;
+        color: rgba(0, 0, 0, 0.67);
+        margin-top: 35px;
+        font-size: 16px;
+    }
+}
+
+.bg-white-op {
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+#aboutus {
+    height: 600px;
+    padding: 150px 65px;
+    background: #1c1c1c;
+    transition: all 2s;
+    padding-top: 50px;
+    .abt-title {
+        padding: 50px;
+        font-family: 'Montserrat';
+        color: white;
+        font-size: 40px;
+    }
+    .inside_abtus {
+        font-family: 'Roboto';
+        font-size: 20px;
+        color: #6e6e6e;
+        .txt {
+            word-break: break-all;
+            .number {
+                display: inline-block;
+                font-size: 48px;
+                font-family: Montserrat;
+                color: #939393;
+                letter-spacing: -1px;
+                line-height: 54px;
+                padding: 15px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        hr {
+            float: left;
+            margin-top: 40px;
+            border-top: 1px solid #ec0404;
+            width: 25%;
+        }
+        .heading {
+            display: inline-block;
+            font-family: Montserrat;
+            padding-left: 20px;
+            line-height: 22px;
+            font-size: 18px;
+        }
+        .cont {
+            font-size: 14px;
+            height: 100px;
+        }
+    }
+    span {
+        // font-size: 90px;
+        line-height: 0;
+        padding: 2px;
+    }
+}
+
+#portfolio {
+    height: 800px;
+    .p-title {
+        padding: 50px;
+        font-family: 'Montserrat';
+        color: black;
+        font-size: 40px;
+    }
+    .block {
+        height: 200px;
+        padding: 50px;
+        span {
+            position: relative;
+            top: 40%;
+            font-size: 25px;
+        }
+    }
 }
