@@ -340,3 +340,24 @@ header {
         }
     }
 }
+#services{
+    height:500px;
+        padding: 0 30px;
+    .p-title {
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 40px;
+}
+.service-text{
+        padding: 0 200px;
+}
+}
+#contactus{
+    height:500px;
+        .p-title {
+    padding-bottom: 50px;
+    font-family: 'Montserrat';
+    color: black;
+    font-size: 40px;
+}
+}
