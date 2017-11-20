@@ -331,8 +331,8 @@ header {
         font-size: 40px;
     }
     .block {
-        height: 200px;
-        padding: 50px;
+        // height: 200px;
+        // padding: 50px;
         span {
             position: relative;
             top: 40%;
@@ -361,3 +361,25 @@ header {
     font-size: 40px;
 }
 }
+.inside_port{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.grow{
+    height: 220px;
+    width: 220px;
+    overflow: hidden;
+    margin-bottom: 15px; 
+}
+.grow img {
+   -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+            transition: all 1s ease;
+  }
+   
+  .grow img:hover {
+   height: 300px;
+    width: 300px;
+  }
