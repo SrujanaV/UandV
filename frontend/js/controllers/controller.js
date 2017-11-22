@@ -19,33 +19,45 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             console.log("This is a button Click");
         };
         $scope.portfolio = [{
-                name: 'LOGO'
+            "image":"img/img1.jpg",
+                "name": 'LOGO'
             }, {
-                name: 'CORPORATE IDENTITY'
+                "image":"img/img1.jpg",
+                "name": 'CORPORATE IDENTITY'
             }, {
-                name: 'BROCHURE'
+                "image":"img/img1.jpg",
+                "name": 'BROCHURE'
             }, {
-                name: 'CATALOGUE '
+                "image":"img/img1.jpg",
+                "name": 'CATALOGUE '
             },
             {
-                name: 'PACKAGING'
+                "image":"img/img1.jpg",
+                "name": 'PACKAGING'
             },
             {
-                name: 'CATALOGUE '
+                "image":"img/img1.jpg",
+                "name": 'CATALOGUE '
             },
             {
-                name: 'EVENT / FESTIVE'
+                "image":"img/img1.jpg",
+                "name": 'EVENT / FESTIVE'
             },
             {
-                name: 'BOOK COVER'
+                "image":"img/img1.jpg",
+                "name": 'BOOK COVER'
             }, {
-                name: 'ADVERTISEMENT'
+                "image":"img/img1.jpg",
+                "name": 'ADVERTISEMENT'
             }, {
-                name: 'WEBSITE DESIGN'
+                "image":"img/img1.jpg",
+                "name": 'WEBSITE DESIGN'
             }, {
-                name: 'E-CAT / MAILER'
+                "image":"img/img1.jpg",
+                "name": 'E-CAT / MAILER'
             }, {
-                name: 'PHOTOGRAPHY'
+                "image":"img/img1.jpg",
+                "name": 'PHOTOGRAPHY'
             }
         ]
 

@@ -51,9 +51,16 @@
             <div class="row">
                 <div class="col-md-3 block" ng-repeat="x in portfolio">
                     <!-- <span>{{x.name}}</span> -->
-                    <div class="grow pic">
-                        <img src="img/img1.jpg" alt="portrait">
-                    </div>
+                        <figure>
+                            <div class="portfolio-img bg-deep-pink"><img ng-src="{{x.image}}" alt="" class="img-responsive"></div>
+                            <figcaption>
+                                <div class="caption-div">
+                                        <div class="inside-caption-div">
+                                            {{x.name}}
+                                        </div>
+                                    </div>
+                            </figcaption>
+                        </figure>
                 </div>
             </div>
         </div>
@@ -66,23 +73,25 @@
                 from print media to web design services.</p>
         </div>
         <div class="row">
-            <div class="col-md-3">
-                <h4>Print Media Design</h4>
-                <p>Brand Development, Corporate Presentations. Corporate Brochures, Commercial Photography, Product Catalogues,
-                </p>
-            </div>
-            <div class="col-md-3">
-                <h4>Web Design Services</h4>
-                <p>Web Design, Maintenance, Re-Design, Flash Website, Static and Dynamic Website Design, Multimedia Presentation.</p>
-            </div>
-            <div class="col-md-3">
-                <h4>SEO Services</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.</p>
-            </div>
-            <div class="col-md-3">
-                <h4>Domain Registration & Web Hosting</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.</p>
-            </div>
+            <div class="service">
+                    <div class="col-md-3">
+                        <h4>Print Media Design</h4>
+                        <p>Brand Development, Corporate Presentations. Corporate Brochures, Commercial Photography, Product Catalogues,
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Web Design Services</h4>
+                        <p>Web Design, Maintenance, Re-Design, Flash Website, Static and Dynamic Website Design, Multimedia Presentation.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>SEO Services</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Domain Registration &amp; Web Hosting</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.</p>
+                    </div>
+                </div>
         </div>
     </section>
     <section id="contactus">
