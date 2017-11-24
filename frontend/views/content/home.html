@@ -50,17 +50,16 @@
             <div class="h1 text-center p-title text-uppercase">PORTFOLIO</div>
             <div class="row">
                 <div class="col-md-3 block" ng-repeat="x in portfolio">
-                    <!-- <span>{{x.name}}</span> -->
-                        <figure>
-                            <div class="portfolio-img bg-deep-pink"><img ng-src="{{x.image}}" alt="" class="img-responsive"></div>
-                            <figcaption>
-                                <div class="caption-div">
-                                        <div class="inside-caption-div">
-                                            {{x.name}}
-                                        </div>
-                                    </div>
-                            </figcaption>
-                        </figure>
+                    <figure ng-click="portfolioImage(x.name)">
+                        <div class="portfolio-img bg-deep-pink"><img ng-src="{{x.image}}" alt="" class="img-responsive"></div>
+                        <figcaption>
+                            <div class="caption-div">
+                                <div class="inside-caption-div">
+                                    <h4>{{x.name}}</h4>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -74,33 +73,32 @@
         </div>
         <div class="row">
             <div class="service">
-                    <div class="col-md-3">
-                        <h4>Print Media Design</h4>
+                <div class="col-md-3 rem-pad" ng-repeat="serve in services">
+                    <div class="box">
+                        <div class="content">
+                            <figure>
+                                <i class="fa {{serve.icon}}" aria-hidden="true"></i><br>
+                                <span>{{serve.title}}</span>
+                                <div class="details">
+                                    <p>{{serve.content}}</p>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- <h4>Print Media Design</h4>
                         <p>Brand Development, Corporate Presentations. Corporate Brochures, Commercial Photography, Product Catalogues,
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Web Design Services</h4>
-                        <p>Web Design, Maintenance, Re-Design, Flash Website, Static and Dynamic Website Design, Multimedia Presentation.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>SEO Services</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Domain Registration &amp; Web Hosting</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum standard dummy text.</p>
-                    </div>
+                        </p> -->
                 </div>
+            </div>
         </div>
     </section>
     <section id="contactus">
         <div class="inside_port">
             <div class="h1 text-center p-title text-uppercase">contact</div>
-
+            <p class="text-center contact-text">304, 3rd floor, vardhman building, hanuman road, above icici direct, near jain derashar, vile parle (east), mumbai - 400 057.<br>Telefax	: <a href="tel:02226101688">+91 022 2610 1688</a><br>Mobile	: <a href="tel:+91 98200 53047">+91 98200 53047</a><br>Email	: <a href="mailto:info@uandvcreativess.com">info@uandvcreativess.com</a>, <a href="mailto:umang.ideas@gmail.com">umang.ideas@gmail.com</a></p>
         </div>
-        <div class="row">
-            <div class="col-md-12">
+        <!-- <div class="row">
+            <div class="col-md-6 col-offset-md-3">
 
                 <address>
                     304, 3rd floor, vardhman building, hanuman road, above icici direct, near jain derashar, vile parle (east), mumbai - 400
@@ -109,7 +107,7 @@
 
             </div>
 
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-12">
                 <div>

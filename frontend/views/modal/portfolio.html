@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <div class="pull-right circle" ng-click="closeModal();"><i class="fa fa-times" aria-hidden="true"></i></div>
+</div>
+<div class="modal-body" id="modal-body">
+    <flex-slider flex-slide="slide in portImage track by $index" prev-text="" next-text="" slideshow=true>
+        <li>
+            <img src="{{slide.image}}">
+        </li>
+    </flex-slider>
+</div>
