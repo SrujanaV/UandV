@@ -177,10 +177,10 @@ header {
                 font-weight: 500;
                 color: #626262;
                 &:hover {
-                    color: #62bcb2;
+                    color: #8ec85a;
                 }
                 .active {
-                    color: #62bcb2;
+                    color: #8ec85a;
                 }
                 .fa {
                     float: right;
@@ -203,7 +203,7 @@ header {
                 cursor: pointer;
                 transition: all 1s;
                 &:hover {
-                    color: #62bcb2;
+                    color: #8ec85a;
                 }
             }
         }
@@ -215,13 +215,13 @@ header {
         width: 100%;
         float: none;
         text-align: -webkit-center;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         .navbar-brand {
             float: none;
         }
     }
     .logo {
-        width: 70px;
+        width: 100px;
         margin: 0 auto;
     }
 }
@@ -233,6 +233,14 @@ header {
     padding-bottom: 20px;
     overflow: hidden;
     height: 100vh;
+}
+
+.green {
+    color: #8ec85a;
+}
+
+.yellow {
+    color: #fdcc30;
 }
 
 .inner-b1 {
@@ -276,7 +284,6 @@ header {
     .abt-title {
         padding: 50px;
         font-family: 'Montserrat';
-        color: white;
         font-size: 40px;
     }
     .inside_abtus {
@@ -300,7 +307,7 @@ header {
         hr {
             float: left;
             margin-top: 40px;
-            border-top: 1px solid #62bcb2;
+            border-top: 1px solid #8ec85a;
             width: 25%;
         }
         .heading {
@@ -327,7 +334,6 @@ header {
     .p-title {
         padding: 50px;
         font-family: 'Montserrat';
-        color: black;
         font-size: 40px;
     }
     .block {
@@ -346,7 +352,6 @@ header {
     padding: 70px 0;
     .p-title {
         font-family: 'Montserrat';
-        color: black;
         font-size: 40px;
     }
     .service-text {
@@ -367,15 +372,15 @@ header {
         font-family: 'Montserrat';
         font-size: 40px;
     }
-    .contact-text{
+    .contact-text {
         padding: 0 200px;
     }
-    .inside_port{
+    .inside_port {
         margin-bottom: 30px;
-        a{
+        a {
             text-decoration: none;
             color: #6e6e6e;
-            &:hover{
+            &:hover {
                 text-decoration: underline;
             }
         }
@@ -398,6 +403,10 @@ figure {
     &:hover .portfolio-img {
         transform: scale(2);
     }
+}
+
+.shadow {
+    box-shadow: 10px 10px 5px rgba(136,136,136,0.3);
 }
 
 .portfolio-img {
@@ -425,7 +434,8 @@ figcaption {
         color: white;
     }
 }
-.box{
+
+.box {
     padding: 0 25px;
     text-align: center;
     height: 100%;
@@ -435,49 +445,52 @@ figcaption {
     border: 1px solid white;
     border-right: none;
     overflow: hidden;
-transition: all 0.5s;
-&:hover .content{
-    top: 10px;
-}
-&:hover .content .details{
-    opacity: 1;
-}
-&:hover figure i{
-    color: #5fbbb1;
-}
-.content{
-    display: table-cell;
-    height: 100%;
-    vertical-align: middle;
-    padding: 0;
-    position: relative;
-    top: 50px;
     transition: all 0.5s;
-    .details{
-        transition: all 0.5s;
-opacity: 0;
+    &:hover .content {
+        top: 10px;
     }
-    figure{
+    &:hover .content .details {
+        opacity: 1;
+    }
+    &:hover figure i {
+        color: #8ec85a;
+    }
+    .content {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+        padding: 0;
+        position: relative;
+        top: 50px;
         transition: all 0.5s;
-        padding: 8% 0;
-        span{
-            font-weight: bold;
+        .details {
+            transition: all 0.5s;
+            opacity: 0;
         }
-        i{
-            font-size: 40px;
-            margin-bottom: 15px;
+        figure {
+            transition: all 0.5s;
+            padding: 8% 0;
+            span {
+                font-weight: bold;
+            }
+            i {
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
         }
     }
 }
-}
-.rem-pad{
+
+.rem-pad {
     padding-left: 0;
     padding-right: 0;
 }
+
 .modal-header {
     padding: 5px;
     border-bottom: none;
 }
+
 .circle {
     border: solid 2px black;
     width: 30px;
@@ -488,16 +501,21 @@ opacity: 0;
     color: black;
     cursor: pointer;
 }
-.flex-control-nav{
+
+.flex-control-nav {
     bottom: -80px;
 }
-.flex-control-paging li a:hover,.flex-control-paging li a.flex-active{
+
+.flex-control-paging li a:hover,
+.flex-control-paging li a.flex-active {
     background: black;
 }
-.flex-control-paging li a{
+
+.flex-control-paging li a {
     width: 9px;
     height: 9px;
 }
-.flex-control-nav li{
+
+.flex-control-nav li {
     margin: 0 3px;
 }
