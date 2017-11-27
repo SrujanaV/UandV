@@ -177,10 +177,10 @@ header {
                 font-weight: 500;
                 color: #626262;
                 &:hover {
-                    color: black;
+                    color: #62bcb2;
                 }
                 .active {
-                    color: black;
+                    color: #62bcb2;
                 }
                 .fa {
                     float: right;
@@ -300,7 +300,7 @@ header {
         hr {
             float: left;
             margin-top: 40px;
-            border-top: 1px solid #ec0404;
+            border-top: 1px solid #62bcb2;
             width: 25%;
         }
         .heading {
