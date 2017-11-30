@@ -248,9 +248,9 @@ header {
     margin-left: 35%;
     /* margin-right: 3%; */
     padding: 7%;
-    width: 62%;
-    height: 100%;
-    overflow-y: scroll;
+    width: 65%;
+    height: 100vh;
+    // overflow-y: scroll;
     .txt {
         font-size: 85px;
         letter-spacing: -2px;
@@ -330,7 +330,7 @@ header {
 }
 
 #portfolio {
-    height: 900px;
+    // height: 900px;
     .p-title {
         padding: 50px;
         font-family: 'Montserrat';
@@ -348,7 +348,7 @@ header {
 }
 
 #services {
-    height: 680px;
+    // height: 680px;
     padding: 70px 0;
     .p-title {
         font-family: 'Montserrat';
@@ -366,7 +366,7 @@ header {
     padding-top: 50px;
     color: #6e6e6e;
     background: #1c1c1c;
-    height: 500px;
+    // height: 500px;
     .p-title {
         padding-bottom: 20px;
         font-family: 'Montserrat';
@@ -519,3 +519,11 @@ figcaption {
 .flex-control-nav li {
     margin: 0 3px;
 }
+
+// .starting_svg{
+//     position: fixed;
+//     background: white;
+//     width: 100vw;
+//     height: 100vh;
+//     z-index: 9999;
+// }

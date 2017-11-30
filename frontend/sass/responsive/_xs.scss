@@ -1,3 +1,80 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
+     #b1{
+         margin-top: 90px;
+     }
+     .content{
+         margin-left: 5px !important;
+         width: 100%;
+     }
+     .side-nav{
+         width: 100%;
+         height: auto;
+         padding: 15px 20px;
+         padding-top: 60px;
+         .navbar-header{
+             margin-top: -40px;
+             margin-bottom: 0;
+         }
+         .logo{
+             float: left;
+             width: 50px;
+         }
+         .nav-footer {
+            position: relative;
+            bottom: 0; 
+            width: 100%; 
+            text-align: center; 
+            margin-left: 0; 
+            padding: 10px; 
+        }
+     }
+     .inner-b1{
+         margin-left: 0;
+         width: 100%;
+         .txt{
+             font-size: 50px;
+             line-height: 60px;
+         }
+     }
+
+     #aboutus{
+         height: 940px;
+         padding: 0;
+         padding-top: 0;
+     }
+     #portfolio{
+         .p-title{
+            padding:30px 8px
+         }
+         .inside_port{
+             margin: 0 30px;
+         }
+     }
+     #services{
+        .service-text{
+            padding: 0;
+            .inside_port{
+                margin: 0 20px;
+            }
+     } 
+     .content{
+        top: 10px;
+        .details{
+        opacity: 1;
+    }
+    figure i{
+        color: #8ec85a;;
+    }
+   }
+     }
+     #contactus {
+         padding-top: 20px;
+         .contact-text{
+         padding: 0;
+     }
+     .inside_port{
+         margin: 0 20px;
+     }
+    }
  }

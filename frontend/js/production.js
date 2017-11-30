@@ -67389,7 +67389,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 animation: true,
                 templateUrl: "views/modal/portfolio.html",
                 scope: $scope,
-                windowClass: 'lg',
+                size: 'lg' ,
                 backdropClass: 'black-drop'
             });
             $scope.closeModal = function () { // to close modals for ALL OTP

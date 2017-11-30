@@ -1,3 +1,44 @@
  @media (max-width: $screen-sm-max) {
      // Tablet
+
+     .side-nav{
+        width: 25%;
+     }
+     #b1{
+         height: 60vh;
+             .logo{
+                 width: 60px;
+             }
+         .inner-b1{
+            margin-left:14%;
+            width: 90%;
+            height: 60vh;
+         }
+     }
+     #aboutus {.abt-title{
+         padding: 0;
+     }
+     hr{
+         display: none;
+     }}
+     #services {
+         .service-text{
+             padding: 0;
+         }
+         .service{
+             margin: 50px 25px;
+         }
+         .content{
+            top: 10px;
+            .details{
+            opacity: 1;
+        }
+        figure i{
+            color: #8ec85a;;
+        }
+       }
+     }
+     #contactus .contact-text{
+         padding: 0;
+     }
  }
