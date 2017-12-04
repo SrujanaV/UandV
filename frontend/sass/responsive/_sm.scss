@@ -13,14 +13,29 @@
             margin-left:14%;
             width: 90%;
             height: 60vh;
+            .txt{
+font-size: 60px;
+            }
          }
      }
-     #aboutus {.abt-title{
+     #aboutus {
+         height: 650px;
+         .abt-title{
          padding: 0;
      }
+     .inside_abtus{
+        .heading{
+            br{
+                display: none;
+            }
+        }}
      hr{
          display: none;
-     }}
+     }
+     .number{
+         font-size: 40px;
+     }
+    }
      #services {
          .service-text{
              padding: 0;

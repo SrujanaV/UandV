@@ -236,11 +236,11 @@ header {
 }
 
 .green {
-    color: #8ec85a;
+    color: #8ec859;
 }
 
 .yellow {
-    color: #fdcc30;
+    color: #ffcc29;
 }
 
 .inner-b1 {
@@ -438,7 +438,7 @@ figcaption {
 .box {
     padding: 0 25px;
     text-align: center;
-    height: 100%;
+    height: 255px;
     width: 100%;
     display: table;
     position: relative;
@@ -520,10 +520,10 @@ figcaption {
     margin: 0 3px;
 }
 
-// .starting_svg{
-//     position: fixed;
-//     background: white;
-//     width: 100vw;
-//     height: 100vh;
-//     z-index: 9999;
-// }
+.starting_svg{
+    position: fixed;
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}

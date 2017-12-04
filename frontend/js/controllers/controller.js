@@ -275,7 +275,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             "title": "Print Media Design",
             "content": "Brand Development, Corporate Presentations. Corporate Brochures, Commercial Photography, Product Catalogues."
         }, {
-            "icon": "fa-crosshairs",
+            "icon": "fa-globe",
             "title": "Web Design Services",
             "content": "Web Design, Maintenance, Re-Design, Flash Website, Static and Dynamic Website Design, Multimedia Presentation."
         }, {
