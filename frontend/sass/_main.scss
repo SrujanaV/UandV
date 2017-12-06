@@ -374,6 +374,11 @@ header {
     }
     .contact-text {
         padding: 0 200px;
+        text-transform: capitalize;
+        font-size: 16px;
+        a{
+            text-transform: lowercase;
+        }
     }
     .inside_port {
         margin-bottom: 30px;
@@ -491,6 +496,10 @@ figcaption {
     border-bottom: none;
 }
 
+.modal-body{
+    padding: 0;
+}
+
 .circle {
     border: solid 2px black;
     width: 30px;
@@ -503,7 +512,8 @@ figcaption {
 }
 
 .flex-control-nav {
-    bottom: -80px;
+    display: none;
+    // bottom: -80px;
 }
 
 .flex-control-paging li a:hover,
