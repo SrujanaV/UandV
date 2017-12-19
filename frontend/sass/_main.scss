@@ -249,8 +249,7 @@ header {
     /* margin-right: 3%; */
     padding: 7%;
     width: 65%;
-    height: 100vh;
-    // overflow-y: scroll;
+    height: 100vh; // overflow-y: scroll;
     .txt {
         font-size: 85px;
         letter-spacing: -2px;
@@ -365,8 +364,7 @@ header {
 #contactus {
     padding-top: 20px;
     color: #6e6e6e;
-    background: #1c1c1c;
-    // height: 500px;
+    background: #1c1c1c; // height: 500px;
     .p-title {
         padding-bottom: 20px;
         font-family: 'Montserrat';
@@ -376,7 +374,7 @@ header {
         padding: 0 200px;
         text-transform: capitalize;
         font-size: 16px;
-        a{
+        a {
             text-transform: lowercase;
         }
     }
@@ -411,7 +409,7 @@ figure {
 }
 
 .shadow {
-    box-shadow: 10px 10px 5px rgba(136,136,136,0.3);
+    box-shadow: 10px 10px 5px rgba(136, 136, 136, 0.3);
 }
 
 .portfolio-img {
@@ -496,7 +494,7 @@ figcaption {
     border-bottom: none;
 }
 
-.modal-body{
+.modal-body {
     padding: 0;
 }
 
@@ -512,8 +510,7 @@ figcaption {
 }
 
 .flex-control-nav {
-    display: none;
-    // bottom: -80px;
+    display: none; // bottom: -80px;
 }
 
 .flex-control-paging li a:hover,
@@ -530,18 +527,54 @@ figcaption {
     margin: 0 3px;
 }
 
-.starting_svg{
+.starting_svg {
     position: relative;
     background: white;
     width: 100vw;
     height: 100vh;
     z-index: 9999;
+    .placing {
+        position: absolute;
+        background: white;
+        width: 100%;
+        height: 50px;
+        left: 0;
+        bottom: 20%;
+    }
 }
-.placing{
+
+.skip {
+    font-size: 12px;
+}
+
+#position {
+    &:after {
+        background: red;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 50px;
+        z-index: 99999;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.em {
+    position: relative;
+    width: 100%;
+    height: 550px;
+}
+
+embed {
+    height: 100%;
+    width: 100%;
+}
+
+.hd {
+    width: 100%;
+    height: 50px;
     position: absolute;
     background: white;
-    width: 100px;
-    height: 30px;
-    left: 240px;
-    bottom: 140px;
+    bottom: 0;
 }
