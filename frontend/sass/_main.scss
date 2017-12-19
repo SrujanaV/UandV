@@ -531,9 +531,17 @@ figcaption {
 }
 
 .starting_svg{
-    position: fixed;
+    position: relative;
     background: white;
     width: 100vw;
     height: 100vh;
     z-index: 9999;
+}
+.placing{
+    position: absolute;
+    background: white;
+    width: 100px;
+    height: 30px;
+    left: 240px;
+    bottom: 140px;
 }

@@ -23,13 +23,17 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
     $stateProvider
+    .state('video', {
+        url: "/",
+        templateUrl: "views/content/video.html"
+    })
         .state('home', {
-            url: "/",
+            url: "/home",
             templateUrl: tempateURL,
             controller: 'HomeCtrl'
         })
         .state('aboutus', {
-            url: "/",
+            url: "/aboutus",
             templateUrl: tempateURL,
             controller: 'aboutusCtrl'
         })
