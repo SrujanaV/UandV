@@ -14,8 +14,12 @@ $brand-info: #000072 !default;
 @import "other/font-fix";
 body {
     // padding-top: 110px;
+    transition: all 2s ease-in;
     background-color: #f3f3f3;
     font-family: 'Montserrat';
+}
+#home,#header{
+    transition: all 2s ease-in !important;    
 }
 
 .content {

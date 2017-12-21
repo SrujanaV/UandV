@@ -25,7 +25,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
     $stateProvider
     .state('video', {
         url: "/",
-        templateUrl: "views/content/video.html"
+        templateUrl: "views/content/video.html",
+        controller: 'VideoCtrl'
     })
         .state('home', {
             url: "/home",
