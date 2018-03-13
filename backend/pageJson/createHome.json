@@ -1,0 +1,48 @@
+{
+    "title": "Create Home",
+    "name": "Home",
+    "jsonPage": "viewHome",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Home"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Name",
+        "id": "name",
+        "validation": ["required"],
+        "url": ""
+    },
+    {
+        "name": "Content",
+        "type": "text",
+        "tableRef": "content",
+        "placeholder": "Enter content",
+        "id": "content",
+        "validation": ["required"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitHome",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewHome"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewHome"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Home/save"
+    }
+}

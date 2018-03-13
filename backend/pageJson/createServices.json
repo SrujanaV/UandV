@@ -1,0 +1,83 @@
+{
+    "title": "Create Services",
+    "name": "Services",
+    "jsonPage": "viewServices",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Services"],
+    "fields": [{
+            "name": "Heading",
+            "type": "text",
+            "tableRef": "heading",
+            "placeholder": "Enter heading",
+            "id": "heading",
+            "validation": ["required"],
+            "url": ""
+        },
+        {
+            "name": "Content",
+            "type": "text",
+            "tableRef": "content",
+            "placeholder": "Enter content",
+            "id": "content",
+            "validation": ["required"],
+            "url": ""
+        },
+        {
+            "name": "Images",
+            "type": "box",
+            "tableRef": "img",
+            "validation": ["required", "trim", ""],
+            "field": [{
+                    "name": "Image",
+                    "type": "image",
+                    "tableRef": "icon",
+                    "placeholder": "Enter icon",
+                    "id": "icon",
+                    "size": "750× 458px",
+                    "validation": ["", "trim", ""],
+                    "url": ""
+                },
+                {
+                    "name": "Title",
+                    "type": "text",
+                    "tableRef": "title",
+                    "placeholder": "Enter title",
+                    "id": "title",
+                    "validation": ["required"],
+                    "url": ""
+                },
+                {
+                    "name": "Discription",
+                    "type": "text",
+                    "tableRef": "discription",
+                    "placeholder": "Enter discription",
+                    "id": "discription",
+                    "validation": ["required"],
+                    "url": ""
+                }
+            ]
+        }],
+    "action": [{
+        "name": "submit",
+        "action": "submitServices",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewServices"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewServices"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Services/save"
+    }
+}

@@ -1,6 +1,6 @@
 {
-    "title": "User",
-    "description": "List of Users",
+    "title": "Aboutus",
+    "description": "List of Aboutus",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
@@ -8,21 +8,23 @@
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
-    }, {
-        "name": "Email",
+    },
+    {
+        "name": "Number",
         "isSort": "",
-        "tableRef": "email"
-    }, {
-        "name": "Mobile",
+        "tableRef": "number"
+    },
+    {
+        "name": "Content",
         "isSort": "",
-        "tableRef": "mobile"
+        "tableRef": "content"
     }],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editUser",
+        "action": "editAboutus",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -31,9 +33,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete User",
-        "content": "Are you sure you want to delete User?",
-        "api": "user/delete",
+        "title": "Delete Aboutus",
+        "content": "Are you sure you want to delete Aboutus?",
+        "api": "aboutus/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -44,10 +46,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createUser"
+        "action": "createAboutus"
     }],
     "apiCall": {
-        "url": "User/search",
+        "url": "Aboutus/search",
         "params": "_id"
     }
 }

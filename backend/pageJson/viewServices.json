@@ -1,6 +1,6 @@
 {
-    "title": "User",
-    "description": "List of Users",
+    "title": "Services",
+    "description": "List of Services",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
@@ -22,7 +22,7 @@
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editUser",
+        "action": "editServices",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -31,9 +31,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete User",
-        "content": "Are you sure you want to delete User?",
-        "api": "user/delete",
+        "title": "Delete Services",
+        "content": "Are you sure you want to delete Services?",
+        "api": "services/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -44,10 +44,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createUser"
+        "action": "createServices"
     }],
     "apiCall": {
-        "url": "User/search",
+        "url": "Services/search",
         "params": "_id"
     }
 }

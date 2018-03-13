@@ -1,6 +1,6 @@
 {
-    "title": "User",
-    "description": "List of Users",
+    "title": "Portfolio",
+    "description": "List of Portfolios",
     "pageType": "view",
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
@@ -9,20 +9,17 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Email",
+        "name": "Imgback",
         "isSort": "",
-        "tableRef": "email"
-    }, {
-        "name": "Mobile",
-        "isSort": "",
-        "tableRef": "mobile"
+        "tableRef": "imgback",
+        "type": "image"
     }],
     "action": [{
         "name": "edit",
         "icon": "fa-pencil",
         "buttonClass": "btn-primary",
         "type": "page",
-        "action": "editUser",
+        "action": "editPortfolio",
         "fieldsToSend": {
             "_id": "_id"
         }
@@ -31,9 +28,9 @@
         "icon": "fa-trash",
         "buttonClass": "btn-danger",
         "type": "apiCallConfirm",
-        "title": "Delete User",
-        "content": "Are you sure you want to delete User?",
-        "api": "user/delete",
+        "title": "Delete Portfolio",
+        "content": "Are you sure you want to delete Portfolio?",
+        "api": "portfolio/delete",
         "fieldsToSend": {
             "name": "_id",
             "value": "_id"
@@ -44,10 +41,10 @@
         "icon": "plus",
         "class": "btn-success",
         "type": "page",
-        "action": "createUser"
+        "action": "createPortfolio"
     }],
     "apiCall": {
-        "url": "User/search",
+        "url": "Portfolio/search",
         "params": "_id"
     }
 }

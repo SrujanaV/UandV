@@ -1,0 +1,56 @@
+{
+    "title": "Edit Home",
+    "name": "Home",
+    "jsonPage": "viewHome",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [
+        {
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Name",
+        "id": "name",
+        "validation": ["required"],
+        "url": ""
+    },
+    {
+        "name": "Content",
+        "type": "text",
+        "tableRef": "content",
+        "placeholder": "Enter content",
+        "id": "content",
+        "validation": ["required"],
+        "url": ""
+    }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitUser",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewUser"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewHome"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Home/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Home/getOne",
+        "params": "_id"
+    }
+
+}

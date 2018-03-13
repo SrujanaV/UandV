@@ -1,0 +1,65 @@
+{
+    "title": "Edit Aboutus",
+    "name": "Aboutus",
+    "jsonPage": "viewAboutus",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [
+        {
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter Name",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },
+    {
+        "name": "Number",
+        "type": "number",
+        "tableRef": "number",
+        "placeholder": "Enter number",
+        "id": "number",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },
+    {
+        "name": "Content",
+        "type": "text",
+        "tableRef": "content",
+        "placeholder": "Enter content",
+        "id": "content",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }
+    ],
+    "action": [{
+        "name": "submit",
+        "action": "submitAboutus",
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAboutus"
+            }
+        }
+    }, {
+        "name": "cancel",
+        "sideMenuRedirect": true,
+        "stateName": {
+            "page": "page",
+            "json": {
+                "id": "viewAboutus"
+            }
+        }
+    }],
+    "apiCall": {
+        "url": "Aboutus/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Aboutus/getOne",
+        "params": "_id"
+    }
+
+}
