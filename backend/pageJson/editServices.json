@@ -7,15 +7,6 @@
     "urlFields": ["_id"],
     "fields": [
         {
-            "name": "Heading",
-            "type": "text",
-            "tableRef": "heading",
-            "placeholder": "Enter heading",
-            "id": "heading",
-            "validation": ["required"],
-            "url": ""
-        },
-        {
             "name": "Content",
             "type": "text",
             "tableRef": "content",

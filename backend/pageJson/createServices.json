@@ -5,15 +5,7 @@
     "desciption": "",
     "pageType": "create",
     "urlFields": ["Services"],
-    "fields": [{
-            "name": "Heading",
-            "type": "text",
-            "tableRef": "heading",
-            "placeholder": "Enter heading",
-            "id": "heading",
-            "validation": ["required"],
-            "url": ""
-        },
+    "fields": [
         {
             "name": "Content",
             "type": "text",

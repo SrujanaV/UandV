@@ -1,7 +1,4 @@
 var schema = new Schema({
-    heading: {
-        type: String
-    },
     content: {
         type: String
     },

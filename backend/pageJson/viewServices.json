@@ -5,17 +5,9 @@
     "sendIdWithCreate": true,
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
+        "name": "Content",
         "isSort": "",
-        "tableRef": "name"
-    }, {
-        "name": "Email",
-        "isSort": "",
-        "tableRef": "email"
-    }, {
-        "name": "Mobile",
-        "isSort": "",
-        "tableRef": "mobile"
+        "tableRef": "content"
     }],
     "action": [{
         "name": "edit",
