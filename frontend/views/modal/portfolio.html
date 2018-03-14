@@ -3,8 +3,9 @@
 </div>
 <div class="modal-body" id="modal-body"></div>
     <flex-slider flex-slide="slide in portImage track by $index" slideshowSpeed=1000 prev-text="" next-text="" slideshow="true">
+        <!--{{slide}}-->
         <li>
-            <img src="{{slide.image}}">
+            <img ng-src="{{slide.image | uploadpath}}">
         </li>
     </flex-slider>
 </div>

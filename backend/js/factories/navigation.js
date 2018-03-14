@@ -1,3 +1,4 @@
+var adminurl = "http://wohlig.io/api/";
 var imgurl = adminurl + "upload/";
 
 var imgpath = imgurl + "readFile";

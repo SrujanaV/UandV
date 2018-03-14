@@ -8,14 +8,15 @@
                     <br/>
                 </div>
                 <hr>
-                <div class="txt2">An advertising agency with a difference, where excellence and brilliance are not goals but norms</div>
+                <!--<div class="txt2">An advertising agency with a difference, where excellence and brilliance are not goals but norms</div>-->
+                <div class="txt2">{{homeContent}}</div>
             </div>
         </div>
     </section>
     <section id="aboutus">
         <div class="inside_abtus">
             <div class="h1 text-center abt-title green">ABOUT US</div>
-            <div class="cnt">
+            <!--<div class="cnt">
                 <div class="col-md-4 col-sm-12 col-xs-12 txt">
                     <div class="number">01.</div>
                     <div class="heading">Advertising <br/>Agency</div>
@@ -42,16 +43,27 @@
                         present success.</div>
                     <hr>
                 </div>
+            </div>-->
+
+            <div class="cnt" ng-repeat="a in aboutusData track by $index">
+                <div class="col-md-4 col-sm-12 col-xs-12 txt">
+                    <div class="number">0{{a.number}}.</div>
+                    <div class="heading">{{a.name}}</div>
+                    <div class="cont">
+                        {{a.content}}</div>
+                    <hr>
+                </div>
             </div>
+
         </div>
     </section>
     <section id="portfolio">
         <div class="inside_port">
             <div class="h1 text-center p-title text-uppercase green">PORTFOLIO</div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12 block" ng-repeat="x in portfolio">
-                    <figure ng-click="portfolioImage(x.name)" class="shadow">
-                        <div class="portfolio-img bg-deep-pink"><img ng-src="{{x.image}}" alt="" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12 block" ng-repeat="x in portfolio track by $index">
+                    <figure ng-click="portfolioImage(x.name,x._id)" class="shadow">
+                        <div class="portfolio-img bg-deep-pink"><img ng-src="{{x.imgback | uploadpath}}" alt="" class="img-responsive"></div>
                         <figcaption>
                             <div class="caption-div">
                                 <div class="inside-caption-div">
@@ -65,11 +77,12 @@
         </div>
     </section>
     <section id="services">
-        <div class="inside_port">
+        <div class="inside_port" ng-repeat="s in servicesData track by $index">
             <div class="h1 text-center p-title text-uppercase green">services</div>
-            <p class="text-center service-text">With our in-depth knowledge and industry experience in various advertising spheres, we bestow our clients with
+            <!--<p class="text-center service-text">With our in-depth knowledge and industry experience in various advertising spheres, we bestow our clients with
                 bright solutions for a substantial growth. Our innovative approach is for providing services that ranges
-                from print media to web design services.</p>
+                from print media to web design services.</p>-->
+                <p class="text-center service-text">{{s.content}}</p>
         </div>
         <div class="row">
             <div class="service">
@@ -92,12 +105,20 @@
     <section id="contactus">
         <div class="inside_port">
             <div class="h1 text-center p-title text-uppercase green">contact</div>
-            <p class="text-center contact-text">304, 3rd floor, vardhman building, hanuman road, above icici direct, near jain derashar, vile parle (east), mumbai - 400 057.<br><span style="font-size:16px; color:#8ec859; font-weight:bold;">Telefax	: </span><a style="font-size:16px; color:#8ec859; font-weight:bold;" href="tel:02226101688">+91 022 2610 1688</a><br><span style="font-size:16px; color:#8ec859; font-weight:bold;">Mobile	: </span><a style="font-size:16px; color:#8ec859; font-weight:bold;" href="tel:+91 98200 53047">+91 98200 53047</a><br>Email	: <a href="mailto:info@uandvcreativess.com">info@uandvcreativess.com</a>, <a href="mailto:umang.ideas@gmail.com">umang.ideas@gmail.com</a></p>
+            <p class="text-center contact-text">304, 3rd floor, vardhman building, hanuman road, above icici direct, near jain derashar, vile parle (east), mumbai
+                - 400 057.<br><span style="font-size:16px; color:#8ec859; font-weight:bold;">Telefax	: </span><a style="font-size:16px; color:#8ec859; font-weight:bold;"
+                    href="tel:02226101688">+91 022 2610 1688</a><br><span style="font-size:16px; color:#8ec859; font-weight:bold;">Mobile	: </span>
+                <a
+                    style="font-size:16px; color:#8ec859; font-weight:bold;" href="tel:+91 98200 53047">+91 98200 53047</a><br>Email : <a href="mailto:info@uandvcreativess.com">info@uandvcreativess.com</a>,
+                    <a
+                        href="mailto:umang.ideas@gmail.com">umang.ideas@gmail.com</a>
+            </p>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1058065144716!2d72.84348075010357!3d19.10301368700896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b5d87b0817%3A0x73ac080ed0e89c51!2sIcicidirect!5e0!3m2!1sen!2sin!4v1511769288506" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1058065144716!2d72.84348075010357!3d19.10301368700896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b5d87b0817%3A0x73ac080ed0e89c51!2sIcicidirect!5e0!3m2!1sen!2sin!4v1511769288506"
+                        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

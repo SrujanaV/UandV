@@ -9,7 +9,7 @@ var schema = new Schema({
         title: {
             type: String
         },
-        discription: {
+        content: {
             type: String
         }
     }]

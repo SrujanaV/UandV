@@ -21,12 +21,11 @@
             "tableRef": "img",
             "validation": ["required", "trim", ""],
             "field": [{
-                    "name": "Image",
-                    "type": "image",
+                    "name": "Icon",
+                    "type": "text",
                     "tableRef": "icon",
-                    "placeholder": "Enter icon",
+                    "placeholder": "Enter icon name",
                     "id": "icon",
-                    "size": "750× 458px",
                     "validation": ["", "trim", ""],
                     "url": ""
                 },
@@ -40,11 +39,11 @@
                     "url": ""
                 },
                 {
-                    "name": "Discription",
+                    "name": "Content",
                     "type": "text",
-                    "tableRef": "discription",
-                    "placeholder": "Enter discription",
-                    "id": "discription",
+                    "tableRef": "content",
+                    "placeholder": "Enter content",
+                    "id": "content",
                     "validation": ["required"],
                     "url": ""
                 }
