@@ -16,7 +16,7 @@
         "url": ""
     },
     {
-        "name": "Imgage",
+        "name": "Image",
         "type": "image",
         "tableRef": "imgback",
         "size": "255 x 255",
@@ -32,11 +32,12 @@
         "type": "box",
         "tableRef": "img",
         "validation": ["required", "trim", ""],
-        "field": [{
+        "fields": [{
                 "name": "Image",
                 "type": "image",
                 "tableRef": "image",
                 "placeholder": "Enter Image",
+                 "onView":true,
                 "id": "image",
                 "size": "750× 458px",
                 "validation": ["", "trim", ""],
@@ -47,6 +48,7 @@
                 "type": "number",
                 "tableRef": "sequence",
                 "placeholder": "Enter Sequence",
+                 "onView":true,
                 "id": "sequence",
                 "validation": ["", "trim", ""],
                 "url": ""

@@ -38,9 +38,20 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         });
 
         NavigationService.callApi("Portfolio/search", function (data) {
+            console.log("data in portfolio",data)
             $scope.portfolioData = data.data.results;
+            console.log("$scope.portfolioData",$scope.portfolioData)
             $scope.portfolio = $scope.portfolioData;
         });
+
+
+        // NavigationService.callApi("Portfolio/getAllPortfolio", function (data) {
+        //     console.log("data in portfolio", data.data.data)
+        //     $scope.portfolioData = data.data.results;
+        //     console.log("$scope.portfolioData", $scope.portfolioData)
+        //     $scope.portfolio = $scope.portfolioData;
+        // });
+
 
         NavigationService.callApi("Services/search", function (data) {
             $scope.servicesData = data.data.results;
@@ -88,9 +99,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //         "name": 'PHOTOGRAPHY'
         //     }
         // ]
-
-
-
 
         $scope.portfolioImage = function (name, id) {
             $scope.name = name;

@@ -22,5 +22,19 @@ schema.plugin(timestamps);
 module.exports = mongoose.model('Portfolio', schema);
 
 var exports = _.cloneDeep(require("sails-wohlig-service")(schema));
-var model = {};
+var model = {
+    getAllPortfolio: function (data, callback) {
+        Portfolio.find({}).deepPopulate('')
+            .exec(function (err, found) {
+                if (err) {
+                    callback(err, null);
+                } else if (_.isEmpty(found)) {
+                    callback(null, "noDataound");
+                } else {
+                    callback(null, found);
+                }
+
+            });
+    },
+};
 module.exports = _.assign(module.exports, exports, model);

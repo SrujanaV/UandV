@@ -196,30 +196,30 @@ myApp.directive('img', function ($compile, $parse) {
     };
 });
 
-myApp.directive('fancyboxBox', function ($document) {
-    return {
-        restrict: 'EA',
-        replace: false,
-        link: function (scope, element, attr) {
-            var $element = $(element);
-            var target;
-            if (attr.rel) {
-                target = $("[rel='" + attr.rel + "']");
-            } else {
-                target = element;
-            }
+// myApp.directive('fancyboxBox', function ($document) {
+//     return {
+//         restrict: 'EA',
+//         replace: false,
+//         link: function (scope, element, attr) {
+//             var $element = $(element);
+//             var target;
+//             if (attr.rel) {
+//                 target = $("[rel='" + attr.rel + "']");
+//             } else {
+//                 target = element;
+//             }
 
-            target.fancybox({
-                openEffect: 'fade',
-                closeEffect: 'fade',
-                closeBtn: true,
-                helpers: {
-                    media: {}
-                }
-            });
-        }
-    };
-});
+//             target.fancybox({
+//                 openEffect: 'fade',
+//                 closeEffect: 'fade',
+//                 closeBtn: true,
+//                 helpers: {
+//                     media: {}
+//                 }
+//             });
+//         }
+//     };
+// });
 
 myApp.directive('menuOptions', function ($document) {
     return {
@@ -426,7 +426,7 @@ myApp.directive('multipleSelect', function ($document, $timeout) {
 
 
 
-myApp.directive('viewField', function ($http, $filter) {
+myApp.directive('viewField', function ($http, $filter, NavigationService, $uibModal, toastr, JsonService, TemplateService) {
     return {
         templateUrl: 'views/directive/viewField.html',
         scope: {
@@ -438,6 +438,7 @@ myApp.directive('viewField', function ($http, $filter) {
                 $scope.type.type = "text";
             }
             $scope.form = {};
+            $scope.templateService = TemplateService;
             $scope.objectDepth = function () {
                 if (_.isObjectLike($scope.storeObj)) {
                     if ($scope.storeValue[$scope.storeObj.field]) {
@@ -459,6 +460,42 @@ myApp.directive('viewField', function ($http, $filter) {
             }
 
             $scope.template = "views/viewField/" + $scope.type.type + ".html";
+            $scope.modalopen = function (amount, userId, type) {
+                var modalInstance = $uibModal.open({
+                    animation: $scope.animationsEnabled,
+                    templateUrl: 'views/modal/' + $scope.type.modal + '.html',
+                    size: 'md',
+                    scope: $scope
+                });
+                $scope.formData = Math.abs(amount);
+                $scope.saveData = function (value, comment) {
+                    if (value) {
+                        if (value > Math.abs(amount)) {
+                            toastr.error("Amount should be less than or equal to Give/Take amount");
+                        } else {
+                            NavigationService.apiCall('member/transactionMoney', {
+                                amount: Math.abs(value),
+                                id: userId,
+                                type: type,
+                                comment: comment
+                            }, function (data) {
+                                if (data.value) {
+                                    toastr.success("Successfully Completed");
+                                    JsonService.refreshView();
+                                    TemplateService.getBalances();
+                                } else {
+                                    toastr.error(data.error);
+                                }
+                            })
+                        }
+                    }
+                    modalInstance.close("cancel");
+                };
+                $scope.onCancel = function () {
+                    modalInstance.close("cancel");
+                };
+            };
+            // $scope.memberId = $.jStorage.get("profile")._id;
         }
     };
 });

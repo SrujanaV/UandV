@@ -33,9 +33,7 @@ myApp.filter('indianCurrency', function () {
 });
 
 myApp.filter('uploadpath', function () {
-  console.log("uploadpath")
     return function (input, width, height, style) {
-        console.log("input",input)
         var other = "";
         if (width && width != "") {
             other += "&width=" + width;
