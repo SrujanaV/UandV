@@ -16,7 +16,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         var i = 0;
         $scope.buttonClick = function () {
             i++;
-            console.log("This is a button Click");
         };
         // $(home).ready(function () { 
         //                setTimeout(function() {
@@ -37,20 +36,15 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             $scope.aboutusData = data.data.results;
         });
 
-        NavigationService.callApi("Portfolio/search", function (data) {
-            console.log("data in portfolio",data)
-            $scope.portfolioData = data.data.results;
-            console.log("$scope.portfolioData",$scope.portfolioData)
-            $scope.portfolio = $scope.portfolioData;
-        });
-
-
-        // NavigationService.callApi("Portfolio/getAllPortfolio", function (data) {
-        //     console.log("data in portfolio", data.data.data)
+        // NavigationService.callApi("Portfolio/search", function (data) {
         //     $scope.portfolioData = data.data.results;
-        //     console.log("$scope.portfolioData", $scope.portfolioData)
         //     $scope.portfolio = $scope.portfolioData;
         // });
+
+        NavigationService.callApi("Portfolio/getAllPortfolio", function (data) {
+            $scope.portfolioData = data.data;
+            $scope.portfolio = $scope.portfolioData;
+        });
 
 
         NavigationService.callApi("Services/search", function (data) {
@@ -112,9 +106,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             $scope.closeModal = function () { // to close modals for ALL OTP
                 $scope.portmodalImage.close();
             };
-
-            console.log("click", name);
-            console.log("id click", id);
             $scope.id = id;
 
             NavigationService.callApiWithData('Portfolio/getOne', {
@@ -699,7 +690,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //     "query": "query"
         // };
         $scope.submitForm = function (data) {
-            console.log("This is it");
             return new Promise(function (callback) {
                 $timeout(function () {
                     callback();
