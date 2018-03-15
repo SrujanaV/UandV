@@ -28,7 +28,7 @@
         "url": ""
     },
     {
-        "name": "Images",
+        "name": " Inside Images",
         "type": "box",
         "tableRef": "img",
         "validation": ["required", "trim", ""],
@@ -39,6 +39,7 @@
                 "placeholder": "Enter Image",
                  "onView":true,
                 "id": "image",
+                "view": true,
                 "size": "750× 458px",
                 "validation": ["", "trim", ""],
                 "url": ""
@@ -49,6 +50,7 @@
                 "tableRef": "sequence",
                 "placeholder": "Enter Sequence",
                  "onView":true,
+                 "view": true,
                 "id": "sequence",
                 "validation": ["", "trim", ""],
                 "url": ""

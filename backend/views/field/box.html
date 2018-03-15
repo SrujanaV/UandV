@@ -15,16 +15,9 @@
                 </tr>
             </thead>
             <tbody>
-<!--<div ng-repeat="d in model">
-    {{d}} </div>-->
-    <!--<tr ng-repeat="data in model">
-             <td ng-repeat="field2 in type.fields" ng-if="field2.onView"> {{data[field2.tableRef]}}</td>   
-              <view-field type="field2" value="data"></view-field>         
-    </tr>-->
 
-                <tr ng-repeat="data in model">
-             <td ng-repeat="field2 in type.fields" ng-if="field2.onView"> {{data[field2.tableRef]}}</td>   
-              <!--<view-field type="field2" value="data"></view-field> -->
+                <!--<tr ng-repeat="data in model">      
+             <td ng-repeat="field2 in type.fields" ng-if="field2.onView"> {{data[field2.tableRef]}}</td>
                         <td>
                             <a class="btn btn-primary" ng-click="editBox('Edit',data)">
                                 <i class="fa fa-pencil"></i>
@@ -33,7 +26,38 @@
                                 <i class="fa fa-trash"></i>
                             </a>
                         </td>
+                </tr>-->
+
+
+                <tr ng-repeat="data in model">
+                    <td ng-if="field2.onView" ng-repeat="field2 in type.fields track by $index">
+
+                        <img ng-if="field2.type == 'image'" ng-src="{{data[field2.tableRef] | serverimage}}">
+                        <div ng-if="field2.type != 'image'">
+                            {{data[field2.tableRef]}}</div>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" ng-click="editBox('Edit',data)">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                        <a class="btn btn-danger" ng-click="deleteBox($index, model)">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                    </td>
                 </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
             </tbody>
         </table>
     </div>

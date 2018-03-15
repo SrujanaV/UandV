@@ -16,16 +16,17 @@
             "url": ""
         },
         {
-            "name": "Images",
+            "name": "Services",
             "type": "box",
             "tableRef": "img",
             "validation": ["required", "trim", ""],
-            "field": [{
+            "fields": [{
                     "name": "Icon",
                     "type": "text",
                     "tableRef": "icon",
                     "placeholder": "Enter icon name",
                     "id": "icon",
+                    "onView":true,
                     "validation": ["", "trim", ""],
                     "url": ""
                 },
@@ -35,6 +36,7 @@
                     "tableRef": "title",
                     "placeholder": "Enter title",
                     "id": "title",
+                    "onView":true,
                     "validation": ["required"],
                     "url": ""
                 },
@@ -44,6 +46,7 @@
                     "tableRef": "content",
                     "placeholder": "Enter content",
                     "id": "content",
+                    "onView":true,
                     "validation": ["required"],
                     "url": ""
                 }

@@ -61,7 +61,7 @@
         <div class="inside_port">
             <div class="h1 text-center p-title text-uppercase green">PORTFOLIO</div>
             <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12 block" ng-repeat="x in portfolio">
+                    <div class="col-md-3 col-sm-6 col-xs-12 block" ng-repeat="x in portfolio | orderBy:'x.name'">
                     <figure ng-click="portfolioImage(x.name,x._id)" class="shadow">
                         <div class="portfolio-img bg-deep-pink"><img ng-src="{{x.imgback | uploadpath}}" alt="" class="img-responsive"></div>
                         <figcaption>
